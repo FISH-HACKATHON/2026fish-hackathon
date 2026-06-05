@@ -16,7 +16,6 @@
   <meta name="twitter:description" content="FISH (FUN Issue Solving Hackathon) は学生が開発から運用までを経験し、成長するためのハッカソンです。">
   <meta name="twitter:image" content="./images/logo.webp">
 
-
   <title>FISH : FUN Issue Solving Hackathon</title>
   <link rel="icon" href="./images/logo.webp" type="image/webp">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -34,13 +33,60 @@
       }
     }
   </script>
+  <style>
+    .header-text {
+      -webkit-text-stroke: 0.5px black; 
+      color: transparent; 
+      font-size: 4rem;
+      text-shadow: 
+    -1px -1px 0 #fff,  
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff; /* 白い外枠の効果 */
+    }
+
+    @media screen and (max-width: 767px) {
+      .header-text{
+        font-size: 0.5rem;
+      }
+    }
+
+    .header-background {
+      background-color: #e4e4e4;
+      background-image: url('./images/logo.webp');
+      background-size: contain;   
+      background-position: -70px; 
+      background-repeat: no-repeat; 
+    }
+  </style>
 </head>
 
-<body class="bg-background">
-  <div class="flex items-center justify-center min-h-screen">
-    <p class="text-2xl md:text-4xl font-bold text-gray-800">
-      coming soon...
-    </p>
+<body>
+  <div class="flex flex-col min-h-screen">
+    <header class="w-full h-[50vh] relative">
+      <div class="absolute inset-0 bg-[#0017c1] flex items-center justify-center">
+        <h1 class="text-4xl md:text-6xl font-bold text-white text-center">🐟FISH : FUN Issue Solving Hackathon🐟</h1>
+      </div>
+    </header>
+
+    <main class="flex-grow">
+      
+<section class="py-12 bg-background">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-bold mb-6 text-center">FISHについて</h2>
+          <p class="text-4xl md:text-5xl font-bold text-gray-800 tracking-widest text-center mt-10">
+            coming soon...
+          </p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="bg-primary text-primary-foreground py-6">
+      <div class="container mx-auto px-4 text-center">
+        <p>&copy; FISH : FUN Issue Solving Hackathon. All rights reserved.</p>
+      </div>
+    </footer>
   </div>
 </body>
 
