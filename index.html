@@ -4,21 +4,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <!-- メタデータ -->
   <meta name="description" content="FISH (FUN Issue Solving Hackathon) は学生が開発から運用までを経験し、成長するためのハッカソンです。">
 
+  <!-- Open Graph meta tags for social sharing (Facebook, LinkedIn, etc.) -->
   <meta property="og:title" content="FISH : FUN Issue Solving Hackathon">
   <meta property="og:description" content="FISH (FUN Issue Solving Hackathon) は学生が開発から運用までを経験し、成長するためのハッカソンです。">
   <meta property="og:image" content="./images/logo.webp">
   <meta property="og:type" content="website">
 
+  <!-- Twitter Card meta tags for sharing -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="FISH : FUN Issue Solving Hackathon">
   <meta name="twitter:description" content="FISH (FUN Issue Solving Hackathon) は学生が開発から運用までを経験し、成長するためのハッカソンです。">
   <meta name="twitter:image" content="./images/logo.webp">
 
+
   <title>FISH : FUN Issue Solving Hackathon</title>
   <link rel="icon" href="./images/logo.webp" type="image/webp">
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind Custom Configuration -->
   <script>
     tailwind.config = {
       theme: {
@@ -34,6 +40,19 @@
     }
   </script>
   <style>
+    /* タイムラインのベースライン */
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: #cbd5e0;
+      /* グレーライン */
+      transform: translateY(-50%);
+    }
+
     .header-text {
       -webkit-text-stroke: 0.5px black; 
       color: transparent; 
@@ -58,30 +77,165 @@
       background-position: -70px; 
       background-repeat: no-repeat; 
     }
+
+    .sponsor-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px; /* ロゴの間隔 */
+      margin-top: 20px; /* 上部の余白 */
+    }
+
+    .sponsor-logo {
+      max-width: 150px; /* ロゴの最大幅 */
+      height: auto; /* 高さを自動調整 */
+    }
+
+    /* 賞金リストのスタイル */
+    .prize-list ul {
+      list-style: none;
+      padding: 0;
+    } 
+
+    .prize-items li {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 15px;
+      padding: 20px;
+      font-size: 1.2rem;
+      color: #333;
+      transition: all 0.3s ease;
+    }
+
+    /* 強調されたテキストのスタイル（賞名など） */
+    .prize-items li strong {
+      color: #e67e22;
+      font-size: 1.4rem;
+    }
   </style>
 </head>
 
 <body>
   <div class="flex flex-col min-h-screen">
+    <!-- Header Section -->
     <header class="w-full h-[50vh] relative">
       <div class="absolute inset-0 bg-[#0017c1] flex items-center justify-center">
         <h1 class="text-4xl md:text-6xl font-bold text-white text-center">🐟FISH : FUN Issue Solving Hackathon🐟</h1>
       </div>
     </header>
 
+    <!-- Main Content -->
     <main class="flex-grow">
-      
-<section class="py-12 bg-background">
+      <section class="py-12 bg-background">
         <div class="container mx-auto px-4">
           <h2 class="text-3xl font-bold mb-6 text-center">FISHについて</h2>
-          <p class="text-4xl md:text-5xl font-bold text-gray-800 tracking-widest text-center mt-10">
-            coming soon...
+          <p class="text-lg text-center max-w-2xl mx-auto mb-6">
+            FISHとは、2026年10月16日～18日に公立はこだて未来大学で行われる学内の課題解決を目的としたハッカソンです。
           </p>
+          <p class="text-lg text-center max-w-2xl mx-auto mb-6">
+            本ハッカソンの最大の特徴は、最優秀チームに賞金に加えて開発費(20万円程度)を提供し、実際の運用に向けて開発を行っていただける点です✨
+          </p>
+          <p class="text-lg text-center max-w-2xl mx-auto">
+            「FISH」（FUN Issue Solving Hackathon）運営一同は、開発から運用までを通じて、まるで"出世魚"🐟
+            のように成長する学生たちを全力でサポートします。アイデアの発案から運用までのプロセスを通して、成長の過程を一緒に楽しみましょう！
+          </p>
+        </div>
+      </section>
+
+      <!-- Timeline Section -->
+      <section class="py-12 bg-muted">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-bold mb-6 text-center">ハッカソン当日までのイベント</h2>
+          <div class="relative timeline flex justify-between items-center py-8 px-4">
+            <!-- Event 1 -->
+            <div class="flex flex-col items-center z-10">
+              <div class="relative">
+                <div class="w-6 h-6 bg-blue-600 rounded-full"></div>
+              </div>
+              <div class="mt-4 text-center">
+                <p class="text-sm text-gray-600">2026/7/7</p>
+                <p class="font-semibold">ハッカソンテーマ検討会</p>
+              </div>
+            </div>
+
+            <!-- Event 3 -->
+            <div class="flex flex-col items-center z-10">
+              <div class="relative">
+                <div class="w-6 h-6 bg-blue-600 rounded-full"></div>
+              </div>
+              <div class="mt-4 text-center">
+                <p class="text-sm text-gray-600">2026/10/16 ~ 10/18</p>
+                <p class="font-semibold">ハッカソン開始！</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Event Details Section -->
+      <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-bold mb-6 text-center">各イベントの様子</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            <!-- Event 1: ハッカソンテーマ検討会 -->
+            <div class="flex flex-col items-center bg-gray-50 p-6 rounded-lg shadow-md border">
+              <img src="./images/2026theme.JPG" alt="ハッカソンテーマ検討会" class="w-full h-48 object-cover rounded-md mb-4">
+              <h3 class="text-xl font-semibold mb-2">ハッカソンテーマ検討会</h3>
+              <p class="text-gray-700 text-center">
+                学生や教員、事務の方々に参加していただきました。皆さんで学内課題について🔥ガチ🔥で議論して頂き、ハッカソン開催に向けて良いスタートが切れました！</p>
+            </div>
+
+      </section>
+
+      <!-- Schedule Section (変更箇所) -->
+      <section class="py-12 bg-background">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-bold mb-6 text-center">ハッカソン当日の流れ</h2>
+          <div class="space-y-4 max-w-2xl mx-auto text-lg">
+            <div class="flex flex-col sm:flex-row justify-between items-center border-b border-gray-300 pb-3">
+              <span class="font-semibold text-primary">Day 1：10月16日（金）</span>
+              <span class="text-gray-600 mt-2 sm:mt-0">時間未定（開会式・開発開始）</span>
+            </div>
+            <div class="flex flex-col sm:flex-row justify-between items-center border-b border-gray-300 pb-3">
+              <span class="font-semibold text-primary">Day 2：10月17日（土）</span>
+              <span class="text-gray-600 mt-2 sm:mt-0">時間未定（開発期間）</span>
+            </div>
+            <div class="flex flex-col sm:flex-row justify-between items-center border-b border-gray-300 pb-3">
+              <span class="font-semibold text-primary">Day 3：10月18日（日）</span>
+              <span class="text-gray-600 mt-2 sm:mt-0">時間未定（成果報告・表彰式）</span>
+            </div>
+          </div>
+          <p class="text-center text-sm text-gray-500 mt-6">※各日程の詳細な時間は、決定次第公式Twitter等でお知らせします。</p>
+        </div>
+      </section>
+
+<!-- Twitter(X) アカウントリンクセクション -->
+      <section class="py-12 bg-muted">
+        <div class="container mx-auto px-4 text-center">
+          <h2 class="text-3xl font-bold mb-4 text-gray-800">最新情報</h2>
+          <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            ハッカソンの最新情報やタイムリーなお知らせは、公式X（旧Twitter）アカウントにて発信しています！<br>
+            ぜひフォローして最新情報をチェックしてください。
+          </p>
+          <div class="flex justify-center">
+            <!-- Xのプロフィールへのリンクボタン -->
+            <a href="https://twitter.com/FUNISHackathon" target="_blank" rel="noopener noreferrer" 
+               class="inline-flex items-center px-8 py-4 bg-black text-white text-lg font-bold rounded-full shadow-lg hover:bg-gray-800 transition-colors duration-300">
+              <!-- Xのロゴアイコン (SVG) -->
+              <svg class="w-6 h-6 mr-3 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.008 4.094H5.078z"/>
+              </svg>
+              @FUNISHackathon を確認する
+            </a>
+          </div>
         </div>
       </section>
 
     </main>
 
+    <!-- Footer -->
     <footer class="bg-primary text-primary-foreground py-6">
       <div class="container mx-auto px-4 text-center">
         <p>&copy; FISH : FUN Issue Solving Hackathon. All rights reserved.</p>
