@@ -8,16 +8,16 @@
 
   <meta property="og:title" content="FISH : FUN Issue Solving Hackathon">
   <meta property="og:description" content="FISH (FUN Issue Solving Hackathon) は学生が開発から運用までを経験し、成長するためのハッカソンです。">
-  <meta property="og:image" content="./images/logo.webp">
+  <meta property="og:image" content="./images/FISH2026_logo_tate.png">
   <meta property="og:type" content="website">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="FISH : FUN Issue Solving Hackathon">
   <meta name="twitter:description" content="FISH (FUN Issue Solving Hackathon) は学生が開発から運用までを経験し、成長するためのハッカソンです。">
-  <meta name="twitter:image" content="./images/logo.webp">
+  <meta name="twitter:image" content="./images/FISH2026_logo_tate.png">
 
   <title>FISH : FUN Issue Solving Hackathon</title>
-  <link rel="icon" href="./images/logo.webp" type="image/webp">
+  <link rel="icon" href="./images/FISH2026_logo_tate.png" type="image/png">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -65,7 +65,7 @@
 
     .header-background {
       background-color: #e4e4e4;
-      background-image: url('./images/logo.webp');
+      background-image: url('./images/FISH2026_logo_tate.png');
       background-size: contain;   
       background-position: -70px; 
       background-repeat: no-repeat; 
@@ -111,10 +111,9 @@
 <body>
   <div class="flex flex-col min-h-screen">
     <!-- Header Section -->
-    <header class="w-full h-[50vh] relative">
-      <div class="absolute inset-0 bg-[#0017c1] flex items-center justify-center">
-        <h1 class="text-4xl md:text-6xl font-bold text-white text-center">🐟FISH : FUN Issue Solving Hackathon🐟</h1>
-      </div>
+    <header class="w-full h-[40vh] md:h-[50vh] bg-background flex items-center justify-center px-6">
+      <!-- 横長ロゴを配置（スマホでは画面幅に合わせて縮小、PCでは最大幅を制限して綺麗に表示） -->
+      <img src="./images/FISH2026_logo_yoko.png" alt="FISH 2026 : FUN Issue Solving Hackathon" class="w-full max-w-3xl h-auto object-contain">
     </header>
 
     <!-- Main Content -->
@@ -321,11 +320,14 @@
              
           <div class="sponsor-logos">
             <img src="./images/ITS.png" alt="ITS" style="width: 200px;">
+            <img src="./images/(ロゴ３段)JTS_sponsor_logo.png" alt="ITS" style="width: 200px;">
+            <img src="./images/NDS.png" alt="NDS" style="width: 200px;">
+            <img src="./images/NAVITIME_logo_.png" alt="NAVITIME" style="width: 200px;">
+            <img src="./images/funovo.png" alt="funovo" class="sponsor-logo">
             <!-- <img src="./images/freee_logo_corporate_logo.png" alt="freee" class="sponsor-logo">
-            <img src="./images/NDS_LOGO_.png" alt="NDS" style="width: 200px;">
-            <img src="./images/SEC.png" alt="SEC" class="sponsor-logo">
-            <img src="./images/logo_CyberAgent.png" alt="CyberAgent" class="sponsor-logo">
-            <img src="./images/NAVITIME_logo_.png" alt="NAVITIME" style="width: 200px;"> -->
+            
+
+            <img src="./images/logo_CyberAgent.png" alt="CyberAgent" class="sponsor-logo"> -->
           </div>
         </div>
       </section>
